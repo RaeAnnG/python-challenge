@@ -53,18 +53,18 @@ with open(pypoll_txt, "w") as textfile:
     print (str(line))
     textfile.write(str(line))
 
-    print("Total Votes: " + str(Total_Votes))
+    print("Total Votes: " + str(Total_Votes) +"\n")
     #print("Total Votes: " + str(Total_Votes))
     #textfile.write("Total Votes: " + str(Total_Votes))
     TotalVotes = (
     f"\n\nTotal Votes: {Total_Votes}\n"
     f"Total Votes:{Total_Votes}\n")  #Using
-    #f"-------------------")
-    textfile.write("Total Votes: " + str(Total_Votes))
+    #print(f"-------------------")
+    textfile.write("Total Votes: " + str(Total_Votes)  +"\n")
 
     #print line break
     #print (str(line))
-    textfile.write(str(line))   
+    #textfile.write(str(line))   
 
     #print line break
     print (str(line))
