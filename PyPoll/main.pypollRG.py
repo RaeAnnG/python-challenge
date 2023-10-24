@@ -54,31 +54,26 @@ with open(pypoll_txt, "w") as textfile:
     textfile.write(str(line))
 
     print("Total Votes: " + str(Total_Votes) +"\n")
-    #print("Total Votes: " + str(Total_Votes))
-    #textfile.write("Total Votes: " + str(Total_Votes))
+ 
     TotalVotes = (
     f"\n\nTotal Votes: {Total_Votes}\n"
-    f"Total Votes:{Total_Votes}\n")  #Using
-    #f"-------------------")
+    f"Total Votes:{Total_Votes}\n")  
+ 
     textfile.write("Total Votes: " + str(Total_Votes))
 
     #print line break
-    #print (str(line))
     textfile.write(str(line))   
 
     #print line break
     print (str(line))
     textfile.write(str(line))
 
+    #Winning Candidate
     for CandidateVoteTotal in CandidateVotes:
         Votes = CandidateVotes.get(CandidateVoteTotal) 
-        #print('CandidateVoteTotal',CandidateVoteTotal)
-        #print('Votes',Votes)
+
         CandidateVotePercentage = float(Votes) / float(Total_Votes) * 100
-            #if CandidateVotePercentage in CandidateVoteList:
-                #CandidateVotePercentage.append(CandidateVoteList)
-        #print(CandidateVotePercentage)
-        #print (str(line))
+
         if WinningVote < Votes:
             WinningVote = Votes
             WinningCandidate = CandidateVoteTotal
@@ -87,11 +82,11 @@ with open(pypoll_txt, "w") as textfile:
         textfile.write(output)
         print (str(line))
         textfile.write(str(line))
-    #print("Winner: "+ WinningCandidate)
+
     print(f"Winner: {WinningCandidate}\n")
-    #textfile.write('WinningVote', WinningVote, 'WinningCandidate', WinningCandidate)
+
     textfile.write("Winner: " + WinningCandidate)
     print (str(line))
-    #textfile.write(str(line))
+
 
     
