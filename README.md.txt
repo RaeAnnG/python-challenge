@@ -14,6 +14,7 @@ Resources Folder
   pypoll text file - this is in both folders as the python scipt is pulling from the resource folder
 Analysis
   pypoll text file - this is in both folders as the python scipt is pulling from the resource folder
+Screenshots - PyBank and PyPoll Text and Terminal printouts
 Challenge Resources
   I received a lot of help to fix the errors in my code
     Tutor - Simon Rennocks
