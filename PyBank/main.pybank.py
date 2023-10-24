@@ -36,12 +36,10 @@ with open(budget_data_file) as csvfile:
     # specify delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    #print(csvreader)
-
     # Read the header row first 
     csv_header = next(csvreader)
     first_row = next(csvreader)
-    #print(f"CSV Header: {csv_header}")
+
     #set starting points and change points
     Months = Months + 1
     Total = Total + int(first_row[1])
@@ -57,26 +55,14 @@ with open(budget_data_file) as csvfile:
             if Netchange > MaxIncrease:
                 MaxIncrease = Netchange
                 MaxIncreaseDate = row[0]
-        #PreviousChange = int(row[1])
+        #PreviousChange
             if Netchange < MaxDecrease:
                 MaxDecrease = Netchange
                 MaxDecreaseDate = row[0]
-        #PreviousChange = int(row[1])
-        #print(row[1],row[0])
-        #print(row[1])
-        #Months = Months + 1
-        #Total = Total + int(row[1])
+
     Averagechange = sum(NetchangeList)/len(NetchangeList)    
-#assign Title and line break
-#title = (f"Financial Analysis\n")
-#line = (f"---------------------\n")
 
-#print Header Financial Analysis
-#print(title)
-
-#print line break
-#print (str(line))
-
+#Print Results
 print("Total Months: " + str(Months))
 print("Total: " + "$" + str(Total))
 print("Average Change: " + "$" + str(Averagechange))
@@ -92,37 +78,23 @@ with open(pybank_txt, "w") as pbtextfile:
     title = (f"Financial Analysis\n")
     line = (f"---------------------\n")
     
-    #print title
-    #print("Financial Analysis")
-    #print line break
-    #print("---------------------")
-
     #print Header Financial Analysis
-    #print(title)
     pbtextfile.write(str(title))
 
     #print line break
-    #print (str(line))
     pbtextfile.write(str(line))
     
     PyBankMonths = (
     f"\n\nTotal Months: {Months}\n")
-    #f"-------------------")
+
 
     PyBankTotal = ("Total: " + '$' + str(Total))
-    #f"\n\nTotal: "$" + str{Total)}\n"
-    #PyBankTotal = (
-    #f"\n\n("Total: " + "$" + str{Total})\n"
-    #f"-------------------")
+
     print (str(line))   
     
     PBAveragechange = (
     f"\n\nAverage Change: {Averagechange}\n"
     f"--------------------")
-
-    #PBAveragechange = (
-    #f"\n\n("Average Change: " + '$' + {Averagechange}\n"
-    #f"--------------------")  
 
     PBGreatestIncrease = (
     f"\nGreatest Increase: {MaxIncrease}\n"
@@ -132,8 +104,6 @@ with open(pybank_txt, "w") as pbtextfile:
     f"\nGreatest Increase: {MaxDecrease}\n"
     f"--------------------")   
 
-    #print(PyPollSummary,end="")
-    #print(SummaryOutput,end="")
     #Print it to the file
     pbtextfile.write(PyBankMonths)
     pbtextfile.write(PyBankTotal)
@@ -151,15 +121,11 @@ with open(pybank_txt, "w") as pbtextfile:
             if Netchange > MaxIncrease:
                 MaxIncrease = Netchange
                 MaxIncreaseDate = row[0]
-        #PreviousChange = int(row[1])
+        #PreviousChange
             if Netchange < MaxDecrease:
                 MaxDecrease = Netchange
                 MaxDecreaseDate = row[0]
-        #PreviousChange = int(row[1])
-        #print(row[1],row[0])
-        #print(row[1])
-        #Months = Months + 1
-        #Total = Total + int(row[1])
+
     Averagechange = sum(NetchangeList)/len(NetchangeList)  
     
     #print line break
