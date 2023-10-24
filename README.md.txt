@@ -11,9 +11,9 @@ PyPoll Folder
   main.pypoll.py - python script - the script is set up to read directly from Resource folder
 Resources Folder
   budget_data
-  pypoll text file - this is in both folders as the python scipt is pulling from the resource folder
+  pypoll text file  
 Analysis
-  pypoll text file - this is in both folders as the python scipt is pulling from the resource folder
+  pypoll text file 
 Screenshots - PyBank and PyPoll Text and Terminal printouts
 Challenge Resources
   I received a lot of help to fix the errors in my code
